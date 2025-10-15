@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Cinzel', serif;
+  background: linear-gradient(to bottom right, #fef6e4, #fae1b6);
+}

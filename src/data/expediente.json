@@ -1,0 +1,25 @@
+{
+  "name": "Diego Becerra",
+  "house": {
+    "name": "Gryffindor",
+    "icon": "🦁",
+    "largeLogo": "/src/data/gryffindor-logo.svg"
+  },
+  "cohort": "2000",
+  "graduation": "2007",
+  "favoriteSubject": "Defensa Contra las Artes Oscuras",
+  "patronus": "Cisne negro",
+  "patronusDescription": "Patronus principal: Cisne negro. El Patronus de Becerra muestra una leve silueta de lobo plateado junto al cisne en momentos de intensa emoción. No es un segundo Patronus, sino una resonancia mágica, una especie de eco espiritual. Raro… pero hermoso.",
+  "patronusProfessor": "Kingsley Shacklebolt",
+  "patronusYear": "2006",
+  "patronusClassification": "Manifestación de Patronus con doble resonancia emocional",
+  "boggart": "La soledad (aula vacía, sin voces ni retratos)",
+  "wand": "Abedul plateado — 12 ¾ pulgadas — Núcleo: pelo de lobo guará. Flexible, responde bien a hechizos protectores.",
+  "mischief": "La Carta que Nunca Llegó",
+  "mischiefDescription": "En cuarto año, Diego falsificó una carta del Ministerio que ordenaba al Sombrero Seleccionador reevaluar asignaciones de casa. El caos duró tres días. La intención real era que el Sombrero considerara cambiar a una chica de Hufflepuff (cabello negro con reflejos rojizos; usa lentes) a Gryffindor.",
+  "mischiefConsequences": "Descubierta por la profesora McGonagall; lectura pública de la carta en el Gran Comedor y una semana de detención. Aun así, la chica le dirigió una sonrisa a Diego.",
+  "professorComment": "Corazón valiente, instinto noble y una imaginación peligrosa. Si sobrevive a sí mismo, hará historia.",
+  "professorName": "Minerva McGonagall",
+  "likes": "Quidditch, excursiones al Bosque Prohibido (con permiso), practicar duelos amistosos",
+  "skills": "Encantamientos protectores, estrategia en duelos, empatía mágica"
+}
