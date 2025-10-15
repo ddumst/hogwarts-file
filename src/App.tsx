@@ -166,25 +166,6 @@ export default function App() {
                   </motion.p>
                 </div>
               </motion.div>
-
-              {/* Buttons for desktop - right aligned in same row */}
-              <div className="hidden lg:flex">
-                <ActionButtons 
-                  onPrint={handlePrint}
-                  className="lg:w-auto"
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.7 }}
-                />
-              </div>
-              
-              {/* Buttons for mobile/tablet - centered below */}
-              <div className="lg:hidden">
-                <ActionButtons 
-                  onPrint={handlePrint}
-                  className="justify-center w-full"
-                />
-              </div>
             </motion.header>
 
             <motion.section 
