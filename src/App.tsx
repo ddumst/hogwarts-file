@@ -127,14 +127,14 @@ export default function App() {
                       transition: { duration: 0.6 }
                     }}
                   >
-                    <img 
-                      src="/src/data/gryffindor-logo.svg" 
-                      alt="Gryffindor Crest"
-                      className="w-full h-full object-contain drop-shadow-lg"
-                      style={{ 
-                        filter: 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.5)) brightness(1.2) saturate(1.3)'
-                      }}
-                    />
+                            <img 
+                              src="/data/gryffindor-logo.svg" 
+                              alt="Gryffindor Crest"
+                              className="w-full h-full object-contain drop-shadow-lg"
+                              style={{ 
+                                filter: 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.5)) brightness(1.2) saturate(1.3)'
+                              }}
+                            />
                   </motion.div>
                   
                   {/* Magical sparkles */}
@@ -189,6 +189,20 @@ export default function App() {
                 >
                   Datos
                 </motion.h2>
+                
+                {/* Portrait */}
+                <motion.div 
+                  className="my-4 flex justify-center"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 1.6 }}
+                >
+                  <img 
+                    src="/data/ddumst-portrait.jpg"
+                    alt="Portrait"
+                    className="w-full h-full object-cover shadow-lg"
+                  />
+                </motion.div>
                 <motion.dl 
                   className="mt-3 text-sm text-gray-300 space-y-3"
                   initial={{ opacity: 0 }}
@@ -245,7 +259,7 @@ export default function App() {
                   <motion.div 
                     className="flex-shrink-0 w-full lg:w-48 h-36 rounded-lg border-2 border-[#8b7355]/20 relative overflow-hidden flex items-center justify-center"
                     style={{
-                      backgroundImage: "url('/src/data/patronus-bg.jpg')",
+                      backgroundImage: "url('/data/patronus-bg.jpg')",
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                       backgroundRepeat: "no-repeat"
@@ -257,7 +271,7 @@ export default function App() {
                   >
                     {/* Patronus form image */}
                     <motion.img 
-                      src="/src/data/patronus-form.png"
+                      src="/data/patronus-form.png"
                       alt="Patronus Form"
                       className="w-32 h-32 object-contain relative z-10"
                       initial={{ opacity: 0, scale: 0.8 }}

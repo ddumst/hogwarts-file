@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Cinzel', serif;
-  background-image: url('/src/data/gryffindor-hero-bg.webp');
+  background-image: url('/data/gryffindor-hero-bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
