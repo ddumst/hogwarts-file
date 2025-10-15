@@ -4,5 +4,44 @@
 
 body {
   font-family: 'Cinzel', serif;
-  background: linear-gradient(to bottom right, #fef6e4, #fae1b6);
+  background-image: url('/src/data/gryffindor-hero-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white !important;
+  }
+  
+  .print\\:hidden {
+    display: none !important;
+  }
+  
+  /* Ensure good contrast for printing */
+  .text-\\[\\#2c1810\\] {
+    color: #000000 !important;
+  }
+  
+  .text-\\[\\#5a4a3a\\] {
+    color: #333333 !important;
+  }
+  
+  /* Remove shadows and effects for cleaner print */
+  .shadow-lg,
+  .shadow-2xl,
+  .drop-shadow-lg {
+    box-shadow: none !important;
+    filter: none !important;
+  }
+  
+  /* Ensure proper spacing for print */
+  .p-6,
+  .p-4 {
+    padding: 1rem !important;
+  }
 }

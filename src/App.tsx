@@ -8,6 +8,7 @@ interface House {
   name: string
   icon: string
   largeLogo: string
+  backgroundImage: string
 }
 
 interface StudentRecord {
@@ -39,11 +40,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#2c1810] via-[#3d2817] to-[#2c1810] flex items-center justify-center p-6 relative overflow-hidden">
-      {/* Magical background effects */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[length:60px_60px]"></div>
-      </div>
+    <div className="min-h-screen flex items-center justify-center p-6 relative">
       
       <motion.main 
         className="w-full max-w-5xl relative z-10"
@@ -52,18 +49,18 @@ export default function App() {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <motion.div 
-          className="relative bg-gradient-to-br from-[#f4f1e8] via-[#f7f1e3] to-[#efe3cf] shadow-2xl rounded-2xl overflow-hidden border-4 border-[#8b7355]"
+          className="relative bg-black/80 backdrop-blur-sm shadow-2xl rounded-2xl overflow-hidden border-2 border-[#8b7355]/30"
           initial={{ scale: 0.9, rotateY: -15 }}
           animate={{ scale: 1, rotateY: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          {/* Parchment texture overlay */}
-          <div className="absolute inset-0 opacity-40">
-            <div className="w-full h-full bg-[radial-gradient(circle_at_25%_25%,rgba(212,196,168,0.1)_1px,transparent_1px)] bg-[length:100px_100px]"></div>
+          {/* Subtle texture overlay */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="w-full h-full bg-[radial-gradient(circle_at_25%_25%,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[length:100px_100px]"></div>
           </div>
           
-          {/* Aged paper effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#8b7355]/5 to-[#8b7355]/10"></div>
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#8b7355]/10 to-[#8b7355]/20"></div>
           
           <div className="relative p-6 md:p-10 z-10">
             <motion.header 
@@ -152,7 +149,7 @@ export default function App() {
                 </motion.div>
                 <div className="text-center lg:text-left">
                   <motion.h1 
-                    className="text-2xl md:text-3xl font-serif font-semibold text-[#2c1810]"
+                    className="text-2xl md:text-3xl font-serif font-semibold text-white"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 }}
@@ -160,7 +157,7 @@ export default function App() {
                     Expediente Hogwarts
                   </motion.h1>
                   <motion.p 
-                    className="text-sm md:text-base text-[#5a4a3a]"
+                    className="text-sm md:text-base text-gray-300"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.9 }}
@@ -197,14 +194,14 @@ export default function App() {
               transition={{ duration: 0.8, delay: 1 }}
             >
               <motion.aside 
-                className="col-span-1 lg:col-span-1 bg-gradient-to-br from-white/80 to-white/60 p-4 rounded-lg border-2 border-[#8b7355]/30 shadow-lg backdrop-blur-sm w-full"
+                className="col-span-1 lg:col-span-1 bg-black/60 backdrop-blur-sm p-4 rounded-lg border-2 border-[#8b7355]/30 shadow-lg w-full"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
                 whileHover={{ scale: 1.02, y: -5 }}
               >
                 <motion.h2 
-                  className="text-lg font-medium text-[#2c1810] border-b-2 border-[#8b7355]/30 pb-2"
+                  className="text-lg font-medium text-white border-b-2 border-[#8b7355]/30 pb-2"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.4 }}
@@ -212,7 +209,7 @@ export default function App() {
                   Datos
                 </motion.h2>
                 <motion.dl 
-                  className="mt-3 text-sm text-[#5a4a3a] space-y-3"
+                  className="mt-3 text-sm text-gray-300 space-y-3"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: 1.6 }}
@@ -231,32 +228,32 @@ export default function App() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.4, delay: 1.8 + index * 0.1 }}
                     >
-                      <dt className="font-semibold text-[#2c1810]">{item.label}</dt>
-                      <dd className="text-[#5a4a3a]">{item.value}</dd>
+                      <dt className="font-semibold text-white">{item.label}</dt>
+                      <dd className="text-gray-300">{item.value}</dd>
                     </motion.div>
                   ))}
                 </motion.dl>
 
                 <motion.div 
-                  className="mt-4 p-3 bg-gradient-to-r from-[#8b7355]/10 to-transparent rounded-md border-l-4 border-[#8b7355]"
+                  className="mt-4 p-3 bg-gradient-to-r from-[#8b7355]/20 to-transparent rounded-md border-l-4 border-[#8b7355]"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 2.2 }}
                 >
-                  <h3 className="font-semibold text-[#2c1810]">Varita</h3>
-                  <p className="text-sm text-[#5a4a3a] italic">{data.wand}</p>
+                  <h3 className="font-semibold text-white">Varita</h3>
+                  <p className="text-sm text-gray-300 italic">{data.wand}</p>
                 </motion.div>
               </motion.aside>
 
               <motion.div 
-                className="col-span-1 lg:col-span-2 bg-gradient-to-br from-white/80 to-white/60 p-4 md:p-6 rounded-lg border-2 border-[#8b7355]/30 shadow-lg backdrop-blur-sm w-full"
+                className="col-span-1 lg:col-span-2 bg-black/60 backdrop-blur-sm p-4 md:p-6 rounded-lg border-2 border-[#8b7355]/30 shadow-lg w-full"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 1.4 }}
                 whileHover={{ scale: 1.01, y: -2 }}
               >
                 <motion.h2 
-                  className="text-xl font-medium text-[#2c1810] border-b-2 border-[#8b7355]/30 pb-2"
+                  className="text-xl font-medium text-white border-b-2 border-[#8b7355]/30 pb-2"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.6 }}
@@ -265,28 +262,27 @@ export default function App() {
                 </motion.h2>
                 <div className="mt-3 flex flex-col lg:flex-row lg:items-start gap-4">
                   <motion.div 
-                    className="flex-shrink-0 w-full lg:w-48 h-36 bg-gradient-to-br from-[#8b7355]/20 to-[#8b7355]/10 rounded-lg flex items-center justify-center border-2 border-[#8b7355]/20"
+                    className="flex-shrink-0 w-full lg:w-48 h-36 rounded-lg border-2 border-[#8b7355]/20 relative overflow-hidden flex items-center justify-center"
+                    style={{
+                      backgroundImage: "url('/src/data/patronus-bg.jpg')",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat"
+                    }}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: 1.8 }}
                     whileHover={{ scale: 1.05 }}
                   >
-                    {/* Simple patronus illustration */}
-                    <motion.svg 
-                      viewBox="0 0 120 80" 
-                      className="w-40 h-28 opacity-90"
-                      initial={{ opacity: 0, rotate: -10 }}
-                      animate={{ opacity: 1, rotate: 0 }}
+                    {/* Patronus form image */}
+                    <motion.img 
+                      src="/src/data/patronus-form.png"
+                      alt="Patronus Form"
+                      className="w-32 h-32 object-contain relative z-10"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.8, delay: 2 }}
-                    >
-                      <g fill="none" stroke="#8b7355" strokeWidth="1">
-                        <path d="M20 60 C 30 45, 50 35, 60 40 C 70 45, 80 55, 100 60" strokeOpacity="0.6" />
-                      </g>
-                      <g fill="currentColor" className="text-[#8b7355]/80">
-                        <ellipse cx="30" cy="40" rx="18" ry="8" fillOpacity="0.95" />
-                        <path d="M18 38 C 22 28, 36 28, 42 36 C 46 42, 36 46, 28 44 Z" />
-                      </g>
-                    </motion.svg>
+                    />
                   </motion.div>
 
                   <motion.div
@@ -294,10 +290,10 @@ export default function App() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 2.2 }}
                   >
-                    <p className="text-sm text-[#5a4a3a]">Patronus principal: <span className="font-semibold text-[#2c1810]">{data.patronus}</span>.</p>
-                    <p className="text-sm mt-2 text-[#5a4a3a]">Nota del profesor {data.patronusProfessor} ({data.patronusYear}):</p>
+                    <p className="text-sm text-gray-300">Patronus principal: <span className="font-semibold text-white">{data.patronus}</span>.</p>
+                    <p className="text-sm mt-2 text-gray-300">Nota del profesor {data.patronusProfessor} ({data.patronusYear}):</p>
                     <motion.blockquote 
-                      className="mt-2 border-l-4 border-[#8b7355]/40 pl-4 italic text-sm text-[#5a4a3a] bg-gradient-to-r from-[#8b7355]/5 to-transparent py-2 rounded-r-md"
+                      className="mt-2 border-l-4 border-[#8b7355]/40 pl-4 italic text-sm text-gray-300 bg-gradient-to-r from-[#8b7355]/10 to-transparent py-2 rounded-r-md"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.6, delay: 2.4 }}
@@ -305,7 +301,7 @@ export default function App() {
                       "{data.patronusDescription}"
                     </motion.blockquote>
                     <motion.p 
-                      className="text-xs text-[#8b7355]/70 mt-2"
+                      className="text-xs text-gray-400 mt-2"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.4, delay: 2.6 }}
@@ -323,7 +319,7 @@ export default function App() {
                 />
 
                 <motion.h2 
-                  className="text-xl font-medium text-[#2c1810] border-b-2 border-[#8b7355]/30 pb-2"
+                  className="text-xl font-medium text-white border-b-2 border-[#8b7355]/30 pb-2"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 3 }}
@@ -331,21 +327,21 @@ export default function App() {
                   Travesura más famosa
                 </motion.h2>
                 <motion.p 
-                  className="mt-3 text-sm text-[#5a4a3a]"
+                  className="mt-3 text-sm text-gray-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 3.2 }}
                 >
-                  <em className="text-[#2c1810] font-semibold">{data.mischief}</em> — {data.mischiefDescription}
+                  <em className="text-white font-semibold">{data.mischief}</em> — {data.mischiefDescription}
                 </motion.p>
 
                 <motion.div 
-                  className="mt-4 text-sm text-[#5a4a3a] p-3 bg-gradient-to-r from-red-50 to-orange-50 rounded-md border-l-4 border-red-400"
+                  className="mt-4 text-sm text-gray-300 p-3 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-md border-l-4 border-red-400"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 3.4 }}
                 >
-                  <p><strong className="text-[#2c1810]">Consecuencias:</strong> {data.mischiefConsequences}</p>
+                  <p><strong className="text-white">Consecuencias:</strong> {data.mischiefConsequences}</p>
                 </motion.div>
 
                 <motion.hr 
@@ -356,7 +352,7 @@ export default function App() {
                 />
 
                 <motion.h2 
-                  className="text-lg font-medium text-[#2c1810] border-b-2 border-[#8b7355]/30 pb-2"
+                  className="text-lg font-medium text-white border-b-2 border-[#8b7355]/30 pb-2"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 3.8 }}
@@ -364,7 +360,7 @@ export default function App() {
                   Anotación del profesorado
                 </motion.h2>
                 <motion.p 
-                  className="mt-2 italic text-sm text-[#5a4a3a] p-3 bg-gradient-to-r from-[#8b7355]/5 to-transparent rounded-md border-l-4 border-[#8b7355]/40"
+                  className="mt-2 italic text-sm text-gray-300 p-3 bg-gradient-to-r from-[#8b7355]/10 to-transparent rounded-md border-l-4 border-[#8b7355]/40"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 4 }}
@@ -379,24 +375,24 @@ export default function App() {
                   transition={{ duration: 0.8, delay: 4.2 }}
                 >
                   <motion.div 
-                    className="p-3 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-md text-xs border-2 border-yellow-200/50"
+                    className="p-3 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-md text-xs border-2 border-yellow-400/30"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 4.4 }}
                     whileHover={{ scale: 1.02, y: -2 }}
                   >
-                    <strong className="text-[#2c1810]">Gustos:</strong>
-                    <div className="text-[#5a4a3a] mt-1">{data.likes}</div>
+                    <strong className="text-white">Gustos:</strong>
+                    <div className="text-gray-300 mt-1">{data.likes}</div>
                   </motion.div>
                   <motion.div 
-                    className="p-3 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-md text-xs border-2 border-yellow-200/50"
+                    className="p-3 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-md text-xs border-2 border-yellow-400/30"
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 4.6 }}
                     whileHover={{ scale: 1.02, y: -2 }}
                   >
-                    <strong className="text-[#2c1810]">Habilidades:</strong>
-                    <div className="text-[#5a4a3a] mt-1">{data.skills}</div>
+                    <strong className="text-white">Habilidades:</strong>
+                    <div className="text-gray-300 mt-1">{data.skills}</div>
                   </motion.div>
                 </motion.div>
 
@@ -404,7 +400,7 @@ export default function App() {
             </motion.section>
 
             <motion.footer 
-              className="mt-8 text-center text-xs text-[#8b7355]/70 border-t-2 border-[#8b7355]/20 pt-4"
+              className="mt-8 text-center text-xs text-gray-400 border-t-2 border-[#8b7355]/20 pt-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 4.8 }}

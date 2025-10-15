@@ -3,7 +3,8 @@
   "house": {
     "name": "Gryffindor",
     "icon": "🦁",
-    "largeLogo": "/src/data/gryffindor-logo.svg"
+    "largeLogo": "/src/data/gryffindor-logo.svg",
+    "backgroundImage": "/src/data/gryffindor-hero-bg.webp"
   },
   "cohort": "2000",
   "graduation": "2007",
